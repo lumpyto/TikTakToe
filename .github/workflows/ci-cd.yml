@@ -8,6 +8,11 @@ on:
   pull_request:
     branches: [ main ]
 
+env:                                   # ← Workflow-level variables
+  REGISTRY: ghcr.io
+  GITHUB_REPOSITORY: lumpyto/TikTakToe # ← hard-coded instead of github.repository
+  IMAGE_TAG: custom-${{ github.run_number }}
+
 jobs:
   test:
     name: Unit Testing
