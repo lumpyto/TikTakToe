@@ -166,8 +166,8 @@ jobs:
       
       - name: Update Kubernetes deployment file
         env:
-          IMAGE_TAG: sha-${{ github.sha }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
+          IMAGE_TAG: ghcr.io/lumpyto/TikTakToe:v1
+          GITHUB_REPOSITORY: lumpyto/TikTakToe
           REGISTRY: ghcr.io
         run: |
           # Define the new image with tag
